@@ -72,3 +72,43 @@ loginButton.addEventListener("click", function(event) {
     // For now, let's just display an alert
     alert("Login Success!")
 });
+
+// Example: Real-time password strength check
+document.getElementById("passwordField").addEventListener("input", function() {
+    var password = this.value;
+    var strength = checkPasswordStrength(password);
+    updateStrengthIndicator(strength);
+});
+
+function checkPasswordStrength(password) {
+     if (password.length >= 8 && /[A-Z]/.test(password) && /[a-z]/.test(password) && /\d/.test(password)) {
+        return 100; // Strong
+    } else if (password.length >= 6) {
+        return 50; // Medium
+    } else {
+        return 0; // Weak
+    }
+}
+
+function updateStrengthIndicator(strength) {
+    var indicator = document.getElementById("strengthIndicator");
+    var strengthText = "Password Strength: ";
+
+    if (strength >= 80) {
+        indicator.textContent = strengthText + "Strong";
+        indicator.style.color = "green"; // Change the indicator text color for strong passwords
+    } else if (strength >= 50) {
+        indicator.textContent = strengthText + "Medium";
+        indicator.style.color = "orange"; // Change the indicator text color for medium passwords
+    } else {
+        indicator.textContent = strengthText + "Weak";
+        indicator.style.color = "red"; // Change the indicator text color for weak passwords
+    }
+
+    // Optionally, you can update the style of the indicator further (e.g., a progress bar).
+}
+
+
+
+
+
