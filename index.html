@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -24,6 +24,65 @@
  ?>
     <p id="content"></p>
     <script src="script.js"></script>
+
+</body>
+
+</html> -->
+
+<!-- <html>
+<body>
+
+<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+  Name: <input type="text" name="fname">
+  <input type="submit">
+</form>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // collect value of input field
+  $name = $_REQUEST['fname'];
+  if (empty($name)) {
+    echo "Name is empty";
+  } else {
+    echo $name;
+  }
+}
+?>
+
+</body>
+</html> -->
+
+<!-- <html>
+<body>
+
+<a href="test_get.php?subject=PHP&web=W3schools.com">Test $GET</a>
+
+</body>
+</html> -->
+
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+    <form action="welcome.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required><br>
+
+        <label for="gender">Gender:</label><br>
+        <input type="radio" name="gender" id="male" value="male" required>
+        <label for="male">Male</label><br>
+        <input type="radio" name="gender" id="female" value="female" required>
+        <label for="female">Female</label><br>
+
+        <input type="submit" value="Submit">
+    </form>
 
 </body>
 
