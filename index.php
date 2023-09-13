@@ -1,12 +1,6 @@
-<!--
-// echo "Hello world!". "<br>";
-// $name = "Saral";
-// $a = 5;
-// $b = 6;
-// echo $a+$b."<br>";
-// echo "My name is $name";
 
-/*
+<?php
+
 class Car {
     public $color;
     public $model;
@@ -25,9 +19,10 @@ echo $myCar -> message();
 echo "<br>";
 $myCar = new Car('red', 'Toyota');
 echo $myCar -> message();
-?> */
 
-<?php
+
+
+
 $cars = array (
   array("Volvo",22,18),
   array("BMW",15,13),
